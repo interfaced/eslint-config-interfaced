@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "ESLint config for the approaches adopted by Interfaced company",
   "author": "Interfaced (http://interfaced.tv)",
   "license": "MIT",
@@ -29,8 +29,8 @@
     "check-rules-usage": "node scripts/check-rules-usage.js"
   },
   "peerDependencies": {
-    "eslint": "^5.0.0",
-    "eslint-plugin-interfaced": "^1.1.0",
+    "eslint": "^5.3.0",
+    "eslint-plugin-interfaced": "^1.2.0",
     "eslint-plugin-goog": "^1.0.0"
   },
   "dependencies": {
@@ -38,6 +38,6 @@
     "js-yaml": "3.10.0"
   },
   "devDependencies": {
-    "eslint": "^5.0.1"
+    "eslint": "^5.3.0"
   }
 }

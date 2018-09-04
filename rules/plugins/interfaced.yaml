@@ -12,6 +12,7 @@ interfaced/prevent-unused-meta-params: "error"
 
 interfaced/no-empty-method: "error"
 interfaced/no-public-underscore: "error"
+interfaced/no-param-reassign: "error"
 interfaced/no-unused-expressions: "error"
 interfaced/no-tabs-in-jsdoc-type: "error"
 interfaced/no-restricted-jsdoc-tags: ["error", {

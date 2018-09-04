@@ -1,5 +1,20 @@
 # Change log
 
+## 1.2.0 (release date: 30.08.2018)
+
+* `eslint@5.3`
+* `eslint-plugin-interfaced@1.2`
+
+* Added rules:
+    - `require-unicode-regexp`
+    - `require-atomic-updates`
+    - `no-async-promise-executor`
+    - `no-misleading-character-class`
+    - `interfaced/no-param-reassign` (instead of `no-param-reassign`)
+
+* Removed deprecated rules:
+    - `no-catch-shadow`
+
 ## 1.1.0 (release date: 30.07.2018)
 
 * `eslint-plugin-interfaced@1.1`

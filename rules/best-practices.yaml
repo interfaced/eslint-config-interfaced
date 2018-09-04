@@ -42,7 +42,7 @@ no-new-func: "error"
 no-new-wrappers: "error"
 no-octal: "error"
 no-octal-escape: "error"
-no-param-reassign: "error"
+no-param-reassign: "off" # Redefined by interfaced/no-param-reassign
 no-proto: "error"
 no-redeclare: ["error", { builtinGlobals: true }]
 no-restricted-properties: "off"
@@ -54,7 +54,7 @@ no-self-compare: "error"
 no-sequences: "error"
 no-throw-literal: "off"
 no-unmodified-loop-condition: "off" # Introduces false positive reports
-no-unused-expressions: "off" # See interfaced/no-unused-expressions instead
+no-unused-expressions: "off" # Redefined by interfaced/no-unused-expressions
 no-unused-labels: "error"
 no-useless-call: "off"
 no-useless-concat: "off"
@@ -66,6 +66,7 @@ no-with: "error"
 prefer-promise-reject-errors: "off"
 radix: "error"
 require-await: "off"
+require-unicode-regexp: "off"
 vars-on-top: "off"
 wrap-iife: ["error", "inside"]
 yoda: "off"

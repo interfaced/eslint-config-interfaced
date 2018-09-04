@@ -1,5 +1,6 @@
 for-direction: "error"
 getter-return: "error"
+no-async-promise-executor: "error"
 no-await-in-loop: "off"
 no-compare-neg-zero: "error"
 no-cond-assign: "error"
@@ -20,6 +21,7 @@ no-func-assign: "error"
 no-inner-declarations: ["error", "both"]
 no-invalid-regexp: ["error", { allowConstructorFlags: ["u", "y"]}]
 no-irregular-whitespace: "error"
+no-misleading-character-class: "error"
 no-obj-calls: "error"
 no-prototype-builtins: "off"
 no-regex-spaces: "error"
@@ -29,6 +31,7 @@ no-unexpected-multiline: "error"
 no-unreachable: "error"
 no-unsafe-finally: "error"
 no-unsafe-negation: "error"
+require-atomic-updates: "error"
 use-isnan: "error"
-valid-jsdoc: "off" # See interfaced/valid-jsdoc instead
+valid-jsdoc: "off" # Redefined by interfaced/valid-jsdoc
 valid-typeof: "error"

@@ -7,19 +7,27 @@ Also there is an extra config as an extension of the base config with some adjus
 
 ## Usage
 
-1) Install the package:
+1) Install the package and the required plugins:
 
 ```sh
-npm i eslint-config-interfaced --save-dev
+npm info "eslint-config-interfaced@latest" peerDependencies
 ```
-
-2) This config uses custom rules from `eslint-plugin-interfaced` and `eslint-plugin-goog`, so you have to install these packages too:
 
 ```sh
-npm i eslint-plugin-interfaced eslint-plugin-goog --save-dev
+npm i \
+    eslint-config-interfaced@latest \
+    eslint-plugin-interfaced@<versionFromInfo> \
+    eslint-plugin-goog@<versionFromInfo> \
+--save-dev
 ```
 
-3) Add `"extends": "interfaced"` or `"extends": "interfaced/zombiebox"` to your .eslintrc file.
+Or using `npx`'s shortcut:
+
+```sh
+npx install-peerdeps eslint-config-interfaced@latest --dev
+```
+
+2) Add `"extends": "interfaced"` or `"extends": "interfaced/zombiebox"` to your .eslintrc file.
 
 ## Configuration
 
