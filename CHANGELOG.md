@@ -1,5 +1,20 @@
 # Change log
 
+## 0.5.0 (release date: 11.12.2017)
+
+* Updated `eslint` to `4.12`
+* Updated `eslint-plugin-goog` to `0.4`
+* Updated `eslint-plugin-interfaced` to `0.4`
+* Described specifying of `domains` and `knownNamespaces` by shared settings instead of rules redefining
+* `interfaced/jsdoc-tags-order`: added `@deprecated`
+* Added rules:
+    - `implicit-arrow-linebreak`
+    - `interfaced/interface-name-prefix`
+    - `interfaced/abstract-class-name-prefix`
+    - `interfaced/no-tabs-in-jsdoc-type`
+    - `interfaced/camelcase` (instead of `camelcase`)
+    - `interfaced/require-jsdoc` (instead of `require-jsdoc`)
+
 ## 0.4.0 (release date: 21.11.2017)
 
 * Required `npm@5`

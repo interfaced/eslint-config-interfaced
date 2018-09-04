@@ -1,11 +1,15 @@
+interfaced/camelcase: "error"
 interfaced/typecast-spacing: "error"
 interfaced/caps-const: "error"
 interfaced/event-const-desc: "error"
 interfaced/capitalized-enum: "error"
 interfaced/capitalized-typedef: "error"
+interfaced/interface-name-prefix: "error"
+interfaced/abstract-class-name-prefix: "error"
 interfaced/no-empty-method: "error"
 interfaced/no-public-underscore: "error"
 interfaced/no-unused-expressions: "error"
+interfaced/no-tabs-in-jsdoc-type: "error"
 interfaced/no-restricted-jsdoc-tags: ["error", {
   tags: [
     "inheritdoc",
@@ -27,6 +31,7 @@ interfaced/statics-order: ["error", { order: ["const", "enum", "typedef"] }]
 interfaced/jsdoc-type-application-dot: ["error", "never"]
 interfaced/jsdoc-tags-order: ["error", {
   tagsOrder: [
+    "deprecated",
     "template",
     "abstract",
     "virtual",
@@ -66,4 +71,12 @@ interfaced/valid-jsdoc: ["error", {
   requireReturnType: true,
   requireReturnDescription: false,
   requireParamDescription: false
+}]
+interfaced/require-jsdoc: ["error", {
+  require: {
+    FunctionDeclaration: false,
+    ArrowFunctionExpression: false,
+    ClassDeclaration: true,
+    MethodDefinition: true
+  }
 }]

@@ -3,7 +3,7 @@ array-element-newline: "off"
 array-bracket-spacing: ["error", "never"]
 block-spacing: ["error", "never"]
 brace-style: "error"
-camelcase: "off"
+camelcase: "off" # See interfaced/camelcase instead
 capitalized-comments: ["error", "always", { ignoreConsecutiveComments: true }]
 comma-dangle: ["error", "never"]
 comma-spacing: "error"
@@ -19,6 +19,7 @@ function-paren-newline: "off"
 id-blacklist: "off"
 id-length: "off"
 id-match: "off"
+implicit-arrow-linebreak: "off"
 indent: ["error", "tab", { SwitchCase: 1 }]
 jsx-quotes: "off"
 key-spacing: "error"
@@ -71,14 +72,7 @@ padded-blocks: ["error", "never"]
 padding-line-between-statements: "off"
 quote-props: "off"
 quotes: ["error", "single", { allowTemplateLiterals: true }]
-require-jsdoc: ["error", {
-  require: {
-    FunctionDeclaration: false,
-    ArrowFunctionExpression: false,
-    ClassDeclaration: true,
-    MethodDefinition: true
-  }
-}]
+require-jsdoc: "off" # See interfaced/require-jsdoc instead
 semi: ["error", "always"]
 semi-spacing: "error"
 semi-style: "error"

@@ -16,23 +16,13 @@ npm i eslint-config-interfaced --save-dev
 npm i eslint-plugin-interfaced eslint-plugin-goog --save-dev
 ```
 
-3) Add `"extends": "interfaced"` to your .eslintrc file
+3) Add `extends: "interfaced"` to your .eslintrc file
 
-4) Redefine rules `goog/no-undeclared-deps` and `goog/no-unused-deps` with your application domain and known namespaces (required for fixing)
-
-```
-'goog/no-undeclared-deps': [
-	'error', {
-		'domains': ['zb', 'my'],
-		'knownNamespaces': ['my.Application', 'my.ServiceContainer']
-	}
-]
-```
+4) Specify your application domain and known namespaces (required for fixing) by shared settings:
 
 ```
-'goog/no-unused-deps': [
-	'error', {
-		'domains': ['zb', 'my']
-	}
-]
+settings: {
+	domains: ['my'],
+	knownNamespaces: ['my.Application', 'my.ServiceContainer']
+}
 ```
