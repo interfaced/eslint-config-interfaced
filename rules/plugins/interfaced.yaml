@@ -57,11 +57,45 @@ interfaced/jsdoc-tags-order: ["error", {
 
 interfaced/jsdoc-type-application-dot: ["error", "never"]
 interfaced/jsdoc-type-spacing: ["error", {
-  typeApplications: "always",
-  functionParams: "always",
-  functionResult: "always",
-  recordFields: "always",
-  unionElements: "never"
+  topBraces: "never",
+  parens: "never",
+  unaryOperator: "never",
+  
+  unionPipe: {
+    before: "never",
+    after: "never"
+  },
+  
+  typeApplicationBrackets: "never",
+  typeApplicationComma: {
+    before: "never",
+    after: "always"
+  },
+ 
+  recordBraces: "never",
+  recordFieldComma: {
+    before: "never",
+    after: "always"
+  },
+  recordFieldColon: {
+    before: "never",
+    after: "always"
+  },
+  
+  functionKeyword: "never",
+  functionParens: "never",
+  functionParamComma: {
+    before: "never",
+    after: "always"
+  },
+  functionParamColon: {
+    before: "never",
+    after: "always"
+  },
+  functionResultColon: {
+    before: "never",
+    after: "always"
+  }
 }]
 interfaced/valid-jsdoc: ["error", {
   prefer: {

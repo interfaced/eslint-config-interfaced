@@ -1,5 +1,10 @@
 # Change log
 
+## 1.1.0 (release date: 30.07.2018)
+
+* `eslint-plugin-interfaced@1.1`
+* `interfaced/jsdoc-type-spacing`: use new options
+
 ## 1.0.0 (release date: 03.07.2018)
 
 * `eslint@5.0`

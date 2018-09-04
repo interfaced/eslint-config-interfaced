@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.0.0",
-  "description": "ESLint config for approaches adopted by Interfaced company",
+  "version": "1.1.0",
+  "description": "ESLint config for the approaches adopted by Interfaced company",
   "author": "Interfaced (http://interfaced.tv)",
   "license": "MIT",
   "engines": {
@@ -30,7 +30,7 @@
   },
   "peerDependencies": {
     "eslint": "^5.0.0",
-    "eslint-plugin-interfaced": "^1.0.0",
+    "eslint-plugin-interfaced": "^1.1.0",
     "eslint-plugin-goog": "^1.0.0"
   },
   "dependencies": {

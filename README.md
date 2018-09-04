@@ -1,10 +1,8 @@
 # eslint-config-interfaced
 
-***
+This package provides extendable shared [ESLint](https://eslint.org) config for the approaches adopted by [Interfaced](https://interfaced.tv/) company.
 
-This package provides extendable shared [ESLint](https://eslint.org) config for approaches adopted by [Interfaced](https://interfaced.tv/) company.
-
-Config's target environment leverages ECMAScript 6 with [Closure Compiler](https://developers.google.com/closure/compiler).
+Config's target environment leverages ECMAScript 6 with [Closure Compiler](https://developers.google.com/closure/compiler).  
 Also there is an extra config as an extension of the base config with some adjusting for [ZombieBox](https://zombiebox.tv) framework environment.
 
 ## Usage
@@ -23,7 +21,7 @@ npm i eslint-plugin-interfaced eslint-plugin-goog --save-dev
 
 3) Add `"extends": "interfaced"` or `"extends": "interfaced/zombiebox"` to your .eslintrc file.
 
-## Adjusting
+## Configuration
 
 For a proper work of some rules you should specify domains (first part of a namespace) and known namespaces by shared settings:
 
