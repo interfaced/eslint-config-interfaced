@@ -10,6 +10,7 @@ dot-notation: "off"
 dot-location: ["error", "property"]
 eqeqeq: "error"
 guard-for-in: "error"
+max-classes-per-file: "off"
 no-alert: "error"
 no-caller: "error"
 no-case-declarations: "off"

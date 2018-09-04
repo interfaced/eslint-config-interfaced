@@ -18,6 +18,9 @@ const zombieboxConfig = Object.assign({}, baseConfigCopy, {
 	}];
 });
 
+// ZombieBox currently doesn't support object spread operator
+zombieboxConfig.rules['prefer-object-spread'] = 'off';
+
 function getSeverity(rule) {
 	return Array.isArray(rule) ? rule[0] : rule;
 }

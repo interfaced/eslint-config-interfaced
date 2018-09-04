@@ -78,6 +78,7 @@ interfaced/valid-jsdoc: ["error", {
   },
   requireReturn: false,
   requireReturnType: true,
+  requireParamType: true,
   requireReturnDescription: false,
   requireParamDescription: false
 }]

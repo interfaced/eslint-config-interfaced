@@ -1,5 +1,17 @@
 # Change log
 
+## 1.0.0 (release date: 03.07.2018)
+
+* `eslint@5.0`
+* `eslint-plugin-interfaced@1.0`
+* `eslint-plugin-goog@1.0`
+* `interfaced/valid-jsdoc`: require param type
+
+* Added rules:
+    - `max-classes-per-file`
+    - `max-lines-per-function`
+    - `prefer-object-spread`
+
 ## 0.7.1 (release date: 25.06.2018)
 
 * Tracked `rule.js` file
