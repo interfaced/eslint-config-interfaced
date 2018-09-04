@@ -4,7 +4,7 @@ array-bracket-spacing: ["error", "never"]
 block-spacing: ["error", "never"]
 brace-style: "error"
 camelcase: "off"
-capitalized-comments: "off"
+capitalized-comments: ["error", "always", { ignoreConsecutiveComments: true }]
 comma-dangle: ["error", "never"]
 comma-spacing: "error"
 comma-style: ["error", "last"]

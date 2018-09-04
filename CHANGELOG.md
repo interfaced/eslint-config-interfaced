@@ -1,5 +1,19 @@
 # Change log
 
+## 0.4.0 (release date: 21.11.2017)
+
+* Required `npm@5`
+* Updated `eslint-plugin-interfaced` to `0.3`
+* `valid-jsdoc`: prefer `@throws` over `@throw`
+* `interfaced/jsdoc-tags-order`: added `@throws`
+* Added rules:
+    - `interfaced/capitalized-enum`
+    - `interfaced/capitalized-typedef`
+    - `interfaced/jsdoc-type-spacing`
+    - `interfaced/jsdoc-type-application-dot`
+    - `interfaced/valid-jsdoc` (instead of `valid-jsdoc`)
+    - `interfaced/no-unused-expressions` (instead of `no-unused-expressions`)
+
 ## 0.3.0 (release date: 7.11.2017)
 
 * Updated `eslint` to `4.9`

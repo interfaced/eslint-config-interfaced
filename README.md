@@ -36,22 +36,3 @@ npm i eslint-plugin-interfaced eslint-plugin-goog --save-dev
 	}
 ]
 ```
-
-## Limitations
-
-Currently, ESLint reports errors about invalid JSDoc for methods in interfaces (rule `valid-jsdoc`).
-As a workaround you may use JSDoc tag `@virtual` for such methods, e.g.:
-
-```
-/**
- * @interface
- */
-class IHandler {
-	/**
-	 * @virtual
-	 * @param {Object} params
-	 * @return {boolean}
-	 */
-	handle(params) {}
-}
-```

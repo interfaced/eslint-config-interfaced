@@ -1,8 +1,11 @@
-interfaced/space-in-typecast: "error"
+interfaced/typecast-spacing: "error"
 interfaced/caps-const: "error"
 interfaced/event-const-desc: "error"
+interfaced/capitalized-enum: "error"
+interfaced/capitalized-typedef: "error"
 interfaced/no-empty-method: "error"
 interfaced/no-public-underscore: "error"
+interfaced/no-unused-expressions: "error"
 interfaced/no-restricted-jsdoc-tags: ["error", {
   tags: [
     "inheritdoc",
@@ -21,6 +24,7 @@ interfaced/lines-around-class: ["error", { before: 2, after: 2, collisionPriorit
 interfaced/methods-order: ["error", { scopesOrder: ["public", "protected", "private"], staticInTheEnd: true }]
 interfaced/props-order: ["error", { scopesOrder: ["public", "protected", "private"], constInTheEnd: true }]
 interfaced/statics-order: ["error", { order: ["const", "enum", "typedef"] }]
+interfaced/jsdoc-type-application-dot: ["error", "never"]
 interfaced/jsdoc-tags-order: ["error", {
   tagsOrder: [
     "template",
@@ -32,8 +36,34 @@ interfaced/jsdoc-tags-order: ["error", {
     "type",
     "param",
     "return",
+    "throws",
     "public",
     "protected",
     "private"
   ]
+}]
+interfaced/jsdoc-type-spacing: ["error", {
+  typeApplications: "always",
+  functionParams: "always",
+  functionResult: "always",
+  recordFields: "always",
+  unionElements: "never"
+}]
+interfaced/valid-jsdoc: ["error", {
+  prefer: {
+      arg: "param",
+      argument: "param",
+      returns: "return",
+      throw: "throws" # Closure Compiler recognizes only @throws
+  },
+  preferType: {
+      Boolean: "boolean",
+      Number: "number",
+      String: "string",
+      object: "Object"
+  },
+  requireReturn: false,
+  requireReturnType: true,
+  requireReturnDescription: false,
+  requireParamDescription: false
 }]

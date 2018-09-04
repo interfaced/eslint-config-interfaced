@@ -30,21 +30,5 @@ no-unreachable: "error"
 no-unsafe-finally: "error"
 no-unsafe-negation: "error"
 use-isnan: "error"
-valid-jsdoc: ["error", {
-  prefer: {
-      arg: "param",
-      argument: "param",
-      returns: "return"
-  },
-  preferType: {
-      Boolean: "boolean",
-      Number: "number",
-      String: "string",
-      object: "Object"
-  },
-  requireReturn: false,
-  requireReturnType: true,
-  requireReturnDescription: false,
-  requireParamDescription: false
-}]
+valid-jsdoc: "off" # See interfaced/valid-jsdoc instead
 valid-typeof: "error"
