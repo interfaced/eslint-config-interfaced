@@ -1,4 +1,4 @@
-goog/no-undeclared-deps: ["error", { domains: ["zb"], knownNamespaces: [] }]
-goog/no-unused-deps: ["error", { domains: ["zb"] }]
+goog/no-undeclared-deps: "error"
+goog/no-unused-deps: "error"
 goog/right-order: "error"
 goog/no-duplicates: "error"

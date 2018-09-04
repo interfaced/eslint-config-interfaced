@@ -1,11 +1,14 @@
 interfaced/camelcase: "error"
-interfaced/typecast-spacing: "error"
 interfaced/caps-const: "error"
 interfaced/event-const-desc: "error"
 interfaced/capitalized-enum: "error"
 interfaced/capitalized-typedef: "error"
 interfaced/interface-name-prefix: "error"
 interfaced/abstract-class-name-prefix: "error"
+interfaced/typecast-spacing: "error"
+interfaced/prevent-unused-typedef-vars: "error"
+interfaced/prevent-unused-meta-params: "error"
+
 interfaced/no-empty-method: "error"
 interfaced/no-public-underscore: "error"
 interfaced/no-unused-expressions: "error"
@@ -21,14 +24,15 @@ interfaced/no-restricted-jsdoc-tags: ["error", {
     }
   ]
 }]
+
 interfaced/lines-between-methods: ["error", { amount: 1 }]
 interfaced/lines-between-props: ["error", { amount: 1 }]
 interfaced/lines-between-statics: ["error", { amount: 2 }]
 interfaced/lines-around-class: ["error", { before: 2, after: 2, collisionPriority: "before" }]
+
 interfaced/methods-order: ["error", { scopesOrder: ["public", "protected", "private"], staticInTheEnd: true }]
 interfaced/props-order: ["error", { scopesOrder: ["public", "protected", "private"], constInTheEnd: true }]
 interfaced/statics-order: ["error", { order: ["const", "enum", "typedef"] }]
-interfaced/jsdoc-type-application-dot: ["error", "never"]
 interfaced/jsdoc-tags-order: ["error", {
   tagsOrder: [
     "deprecated",
@@ -38,7 +42,9 @@ interfaced/jsdoc-tags-order: ["error", {
     "extends",
     "implements",
     "override",
+    "suppress",
     "type",
+    "this",
     "param",
     "return",
     "throws",
@@ -47,6 +53,8 @@ interfaced/jsdoc-tags-order: ["error", {
     "private"
   ]
 }]
+
+interfaced/jsdoc-type-application-dot: ["error", "never"]
 interfaced/jsdoc-type-spacing: ["error", {
   typeApplications: "always",
   functionParams: "always",
@@ -79,4 +87,8 @@ interfaced/require-jsdoc: ["error", {
     ClassDeclaration: true,
     MethodDefinition: true
   }
+}]
+interfaced/prefer-shorthand-jsdoc-types: ["error", {
+  optionalParam: "always",
+  nullableType: "always"
 }]

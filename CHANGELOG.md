@@ -1,5 +1,18 @@
 # Change log
 
+## 0.6.0 (release date: 15.01.2018)
+
+* Updated `eslint-plugin-interfaced` to `0.5`
+* Created separate config for zombiebox environment
+* Added zombiebox-specific globals to zombiebox config
+* `goog/no-undeclared-deps`, `goog/no-unused-deps`: set "zb" domain only in zombiebox config [BREAKING]
+* `interfaced/jsdoc-tags-order`: added `@suppress`, `@this`
+* `no-unused-vars`: don't ignore args
+* Added rules:
+    - `interfaced/prefer-shorthand-jsdoc-types`
+    - `interfaced/prevent-unused-typedef-vars`
+    - `interfaced/prevent-unused-meta-params`
+    
 ## 0.5.0 (release date: 11.12.2017)
 
 * Updated `eslint` to `4.12`
