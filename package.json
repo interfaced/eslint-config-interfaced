@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "ESLint config for approaches adopted by 'Interfaced' company",
   "author": "Interfaced (http://interfaced.tv)",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "README.md",
     "CHANGELOG.md",
     "rules",
+    "rules.js",
     "index.js",
     "zombiebox.js"
   ],

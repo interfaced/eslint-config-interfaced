@@ -1,5 +1,9 @@
 # Change log
 
+## 0.7.1 (release date: 25.06.2018)
+
+* Tracked `rule.js` file
+
 ## 0.7.0 (release date: 25.06.2018)
 
 * `eslint@4.19`
