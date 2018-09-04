@@ -3,7 +3,7 @@ array-callback-return: "error" # Works not only with arrays, but with every find
 block-scoped-var: "error"
 complexity: "off"
 class-methods-use-this: "off"
-consistent-return: "error"
+consistent-return: "off" # Introduces a headache with Promise callbacks, also a little redundant with static typing
 curly: "error"
 default-case: "off"
 dot-notation: "off"
@@ -52,7 +52,7 @@ no-self-assign: "off" # Not suitable for typecasting (foo = / ** @type {T} * / (
 no-self-compare: "error"
 no-sequences: "error"
 no-throw-literal: "off"
-no-unmodified-loop-condition: "error"
+no-unmodified-loop-condition: "off" # Introduces false positive reports
 no-unused-expressions: "off" # See interfaced/no-unused-expressions instead
 no-unused-labels: "error"
 no-useless-call: "off"
@@ -66,5 +66,5 @@ prefer-promise-reject-errors: "off"
 radix: "error"
 require-await: "off"
 vars-on-top: "off"
-wrap-iife: "off"
+wrap-iife: ["error", "inside"]
 yoda: "off"

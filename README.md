@@ -1,4 +1,4 @@
-# Interfaced ESLint config
+# eslint-config-interfaced
 
 ***
 
@@ -25,7 +25,7 @@ npm i eslint-plugin-interfaced eslint-plugin-goog --save-dev
 
 ## Adjusting
 
-For proper work of some rules you should specify domains (first part of namespace) and known namespaces by shared settings:
+For a proper work of some rules you should specify domains (first part of a namespace) and known namespaces by shared settings:
 
 ```json
 {
@@ -38,7 +38,7 @@ For proper work of some rules you should specify domains (first part of namespac
 
 You can omit `knownNamespaces`, but in this case auto fix by `--fix` flag will not work for rules that depend on it.
 
-To ease retrieval of all known namespaces you can use utility that is provided by `eslint-plugin-goog` package:
+To ease retrieval of all known namespaces you can use an utility that is provided by `eslint-plugin-goog` package:
 
 ```javascript
 // Your .eslintrc.js
@@ -57,7 +57,7 @@ module.exports = {
 
 ## ZombieBox
 
-Typical configuration for ZombieBox environment looks like below:
+A typical configuration for ZombieBox environment looks like below:
 
 ```javascript
 // Your .eslintrc.js

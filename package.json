@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "ESLint config for approaches adopted by 'Interfaced' company",
   "author": "Interfaced (http://interfaced.tv)",
   "license": "MIT",
@@ -12,9 +12,9 @@
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
+    "rules",
     "index.js",
-    "zombiebox.js",
-    "rules"
+    "zombiebox.js"
   ],
   "keywords": [
     "lint",
@@ -24,13 +24,19 @@
     "zombiebox",
     "closure compiler"
   ],
+  "scripts": {
+    "check-rules-usage": "node scripts/check-rules-usage.js"
+  },
   "peerDependencies": {
-    "eslint": "^4.12.0",
-    "eslint-plugin-interfaced": "^0.5.0",
+    "eslint": "^4.19.0",
+    "eslint-plugin-interfaced": "^0.6.0",
     "eslint-plugin-goog": "^0.4.0"
   },
   "dependencies": {
-    "js-yaml": "3.10.0",
-    "recursive-readdir-synchronous": "0.0.3"
+    "fs-readdir-recursive": "1.1.0",
+    "js-yaml": "3.10.0"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1"
   }
 }

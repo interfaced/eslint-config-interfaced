@@ -1,6 +1,7 @@
 interfaced/camelcase: "error"
 interfaced/caps-const: "error"
 interfaced/event-const-desc: "error"
+interfaced/event-const-value: "error"
 interfaced/capitalized-enum: "error"
 interfaced/capitalized-typedef: "error"
 interfaced/interface-name-prefix: "error"

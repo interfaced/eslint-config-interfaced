@@ -1,8 +1,25 @@
 # Change log
 
+## 0.7.0 (release date: 25.06.2018)
+
+* `eslint@4.19`
+* `eslint-plugin-interfaced@0.6`
+* `wrap-iife`: set to "inside"
+* `prefer-arrow-callback`: disallow unbound "this"
+
+* Added rules:
+    - `interfaced/event-const-value`
+
+* Turned off rules:
+    - `consistent-return`
+    - `capitalized-comments`
+    - `no-unmodified-loop-condition`
+
+* Fixed a critical npm audit report
+
 ## 0.6.2 (release date: 22.01.2018)
 
-* Prevent base config polluting in zombiebox config
+* Prevent base config polluting by zombiebox config
 
 ## 0.6.1 (release date: 15.01.2018)
 
@@ -10,24 +27,26 @@
 
 ## 0.6.0 (release date: 15.01.2018)
 
-* Updated `eslint-plugin-interfaced` to `0.5`
-* Created separate config for zombiebox environment
-* Added zombiebox-specific globals to zombiebox config
-* `goog/no-undeclared-deps`, `goog/no-unused-deps`: set "zb" domain only in zombiebox config [BREAKING]
-* `interfaced/jsdoc-tags-order`: added `@suppress`, `@this`
+* `eslint-plugin-interfaced@0.5`
 * `no-unused-vars`: don't ignore args
+* `interfaced/jsdoc-tags-order`: added `@suppress`, `@this`
+* `goog/no-undeclared-deps`, `goog/no-unused-deps`: set "zb" domain only in zombiebox config [BREAKING]
+
 * Added rules:
     - `interfaced/prefer-shorthand-jsdoc-types`
     - `interfaced/prevent-unused-typedef-vars`
     - `interfaced/prevent-unused-meta-params`
+
+* Separate config for zombiebox environment
+* Added zombiebox-specific globals to zombiebox config
     
 ## 0.5.0 (release date: 11.12.2017)
 
-* Updated `eslint` to `4.12`
-* Updated `eslint-plugin-goog` to `0.4`
-* Updated `eslint-plugin-interfaced` to `0.4`
-* Described specifying of `domains` and `knownNamespaces` by shared settings instead of rules redefining
+* `eslint@4.12`
+* `eslint-plugin-goog@0.4`
+* `eslint-plugin-interfaced@0.4`
 * `interfaced/jsdoc-tags-order`: added `@deprecated`
+
 * Added rules:
     - `implicit-arrow-linebreak`
     - `interfaced/interface-name-prefix`
@@ -36,12 +55,15 @@
     - `interfaced/camelcase` (instead of `camelcase`)
     - `interfaced/require-jsdoc` (instead of `require-jsdoc`)
 
+* Described specifying of `domains` and `knownNamespaces` by shared settings instead of rules redefining
+
 ## 0.4.0 (release date: 21.11.2017)
 
-* Required `npm@5`
-* Updated `eslint-plugin-interfaced` to `0.3`
+* `npm@5`
+* `eslint-plugin-interfaced@0.3`
 * `valid-jsdoc`: prefer `@throws` over `@throw`
 * `interfaced/jsdoc-tags-order`: added `@throws`
+
 * Added rules:
     - `interfaced/capitalized-enum`
     - `interfaced/capitalized-typedef`
@@ -52,10 +74,10 @@
 
 ## 0.3.0 (release date: 7.11.2017)
 
-* Updated `eslint` to `4.9`
-* Updated `eslint-plugin-goog` to `0.3`
-* Updated `eslint-plugin-interfaced` to `0.2`
-* Added usage of .yaml for configuration
+* `eslint@4.9`
+* `eslint-plugin-goog@0.3`
+* `eslint-plugin-interfaced@0.2`
+
 * Added rules:
     - `prefer-promise-reject-errors`
     - `prefer-destructuring`
@@ -75,19 +97,43 @@
     - `semi-style`
     - `switch-colon-spacing`
     - `template-tag-spacing`
+
 * Removed deprecated rules:
     - `lines-around-directive`
     - `newline-after-var`
     - `newline-before-return` [BREAKING]
 
+* Use .yaml for configuration
+
 ## 0.2.0 (release date: 8.06.2017)
 
-* Added `eslint-plugin-goog` and `eslint-plugin-interfaced` to peer dependencies
-* Added plugins `goog` and `interfaced` to `plugins` section
-* Added rules from plugin `goog`
-* Added rules from plugin `interfaced`
-* Allow methods in `no-empty-function` (for extending by `interfaced/no-empty-method`)
-* Removed `@virtual` from `valid-jsdoc` blacklist
+* `eslint-plugin-goog@0.2.0`
+* `eslint-plugin-interfaced@0.1.0`
+
+* `valid-jsdoc`: removed `@virtual` from the blacklist
+* `no-empty-function`: allow methods (for extending by `interfaced/no-empty-method`)
+
+* New rules:
+    - `interfaced/space-in-typecast`
+    - `interfaced/caps-const`
+    - `interfaced/event-const-desc`
+    - `interfaced/no-empty-method`
+    - `interfaced/no-public-underscore`
+    - `interfaced/no-restricted-jsdoc-tags`
+    - `interfaced/newline-between-methods`
+    - `interfaced/newline-between-props`
+    - `interfaced/newline-between-statics`
+    - `interfaced/newline-before-after-class`
+    - `interfaced/methods-order`
+    - `interfaced/props-order`
+    - `interfaced/statics-order`
+    - `interfaced/jsdoc-tags-order`
+    - `goog/no-undeclared-deps`
+    - `goog/no-unused-deps`
+    - `goog/right-order`
+    - `goog/no-duplicates`
+    
+* Added `goog` and `interfaced` to `plugins` section
 
 ## 0.1.0 (release date: 29.03.2017)
 

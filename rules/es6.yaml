@@ -16,7 +16,7 @@ no-useless-constructor: "error"
 no-useless-rename: "error"
 no-var: "error"
 object-shorthand: "off"
-prefer-arrow-callback: ["error", { allowUnboundThis: true }]
+prefer-arrow-callback: ["error", { allowUnboundThis: false }]
 prefer-const: ["error", { ignoreReadBeforeAssign: true }]
 prefer-destructuring: "off"
 prefer-numeric-literals: "error"
