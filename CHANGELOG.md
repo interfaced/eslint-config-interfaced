@@ -1,5 +1,9 @@
 # Change log
 
+## 0.6.2 (release date: 22.01.2018)
+
+* Prevent base config polluting in zombiebox config
+
 ## 0.6.1 (release date: 15.01.2018)
 
 * Tracked zombiebox config file
