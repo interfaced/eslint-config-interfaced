@@ -1,25 +1,29 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "0.2.0",
-  "description": "ESLint config for an approaches adopted by 'Interfaced' company",
+  "version": "0.3.0",
+  "description": "ESLint config for approaches adopted by 'Interfaced' company",
   "author": "Interfaced (http://interfaced.tv)",
   "license": "MIT",
   "files": [
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
-    "index.js"
+    "index.js",
+    "rules"
   ],
   "keywords": [
     "lint",
     "eslint",
-    "eslint-config",
-    "eslinconfig",
+    "config",
     "interfaced"
   ],
   "peerDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-interfaced": "^0.1.0",
-    "eslint-plugin-goog": "^0.2.0"
+    "eslint": "^4.9.0",
+    "eslint-plugin-interfaced": "^0.2.0",
+    "eslint-plugin-goog": "^0.3.0"
+  },
+  "dependencies": {
+    "js-yaml": "3.10.0",
+    "recursive-readdir-synchronous": "0.0.3"
   }
 }
