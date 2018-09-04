@@ -1,5 +1,9 @@
 # Change log
 
+## 0.6.1 (release date: 15.01.2018)
+
+* Tracked zombiebox config file
+
 ## 0.6.0 (release date: 15.01.2018)
 
 * Updated `eslint-plugin-interfaced` to `0.5`
