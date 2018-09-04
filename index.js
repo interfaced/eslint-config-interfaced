@@ -5,6 +5,10 @@ module.exports = {
 		'es6': true,
 		'node': true
 	},
+	'plugins': [
+		'interfaced',
+		'goog'
+	],
 	'rules': {
 		/**
 		 * Restrictions
@@ -174,7 +178,6 @@ module.exports = {
 				'prefer': {
 					'arg': 'param',
 					'argument': 'param',
-					'virtual': 'abstract',
 					'returns': 'return'
 				},
 				'preferType': {
@@ -514,7 +517,9 @@ module.exports = {
 			'error'
 		],
 		'no-empty-function': [
-			'error'
+			'error', {
+				'allow': ['methods']
+			}
 		],
 		'no-empty-pattern': [
 			'error'
@@ -850,6 +855,118 @@ module.exports = {
 		],
 		'generator-star-spacing': [
 			'off'
+		],
+
+		/**
+		 * Goog
+		 */
+
+		'goog/no-undeclared-deps': [
+			'error', {
+				'domains': ['zb'],
+				'knownNamespaces': []
+			}
+		],
+		'goog/no-unused-deps': [
+			'error', {
+				'domains': ['zb']
+			}
+		],
+		'goog/right-order': [
+			'error'
+		],
+		'goog/no-duplicates': [
+			'error'
+		],
+
+		/**
+		 * Interfaced
+		 */
+
+		'interfaced/space-in-typecast': [
+			'error'
+		],
+		'interfaced/caps-const': [
+			'error'
+		],
+		'interfaced/event-const-desc': [
+			'error'
+		],
+		'interfaced/no-empty-method': [
+			'error'
+		],
+		'interfaced/no-public-underscore': [
+			'error'
+		],
+		'interfaced/no-restricted-jsdoc-tags': [
+			'error', {
+				tags: [
+					'inheritdoc',
+					'public',
+					{
+						tag: 'extends',
+						allowWithTags: ['interface'],
+						allowWithTypes: ['TypeApplication'] // Let use @extends for generics
+					}
+				]
+			}
+		],
+		'interfaced/newline-between-methods': [
+			'error', {
+				'newlinesCount': 1
+			}
+		],
+		'interfaced/newline-between-props': [
+			'error', {
+				'newlinesCount': 1
+			}
+		],
+		'interfaced/newline-between-statics': [
+			'error', {
+				'newlinesCount': 2
+			}
+		],
+		'interfaced/newline-before-after-class': [
+			'error', {
+				'newlinesCountBefore': 2,
+				'newlinesCountAfter': 2,
+				'collisionPriority': 'before'
+			}
+		],
+		'interfaced/methods-order': [
+			'error', {
+				'scopesOrder': ['public', 'protected', 'private'],
+				'staticInTheEnd': true
+			}
+		],
+		'interfaced/props-order': [
+			'error', {
+				'scopesOrder': ['public', 'protected', 'private'],
+				'constInTheEnd': true
+			}
+		],
+		'interfaced/statics-order': [
+			'error', {
+				'order': ['const', 'enum', 'typedef']
+			}
+		],
+		'interfaced/jsdoc-tags-order': [
+			'error', {
+				'tagsOrder': [
+					'template',
+					'abstract',
+					'virtual',
+					'extends',
+					'implements',
+					'override',
+					'type',
+					'param',
+					'return',
+					'public',
+					'protected',
+					'private'
+				]
+			}
 		]
 	}
 };
