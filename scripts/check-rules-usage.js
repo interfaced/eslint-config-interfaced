@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const RULE_DEPRECATION_MARK = /deprecated: true/;
-	
+
 const eslintRulesDir = path.join(require.resolve('eslint'), '..', 'rules');
 const eslintRuleFiles = fs.readdirSync(eslintRulesDir)
 	.filter((file) => !file.startsWith('.'));
@@ -11,11 +11,11 @@ const eslintRules = eslintRuleFiles.map((file) => path.parse(file).name);
 
 const deprecatedRules = eslintRuleFiles.reduce((acc, file) => {
 	const fileContent = fs.readFileSync(path.join(eslintRulesDir, file), 'utf8');
-	
+
 	if ((RULE_DEPRECATION_MARK).test(fileContent)) {
 		acc.push(path.parse(file).name);
 	}
-	
+
 	return acc;
 }, []);
 

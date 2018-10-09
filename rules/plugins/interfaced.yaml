@@ -57,6 +57,7 @@ interfaced/jsdoc-tags-order: ["error", {
 }]
 
 interfaced/jsdoc-type-application-dot: ["error", "never"]
+interfaced/jsdoc-type-indent: ["error", 4]
 interfaced/jsdoc-type-spacing: ["error", {
   topBraces: "never",
   parens: "never",

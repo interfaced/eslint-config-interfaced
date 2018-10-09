@@ -1,5 +1,9 @@
 # Change log
 
+## 1.3.0 (release date: 09.10.2018)
+
+* `eslint-plugin-interfaced@1.4`
+
 ## 1.2.0 (release date: 30.08.2018)
 
 * `eslint@5.3`
