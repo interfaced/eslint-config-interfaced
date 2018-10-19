@@ -7,6 +7,8 @@ interfaced/capitalized-typedef: "error"
 interfaced/interface-name-prefix: "error"
 interfaced/abstract-class-name-prefix: "error"
 interfaced/typecast-spacing: "error"
+
+interfaced/prevent-unused-jsdoc-types: "error"
 interfaced/prevent-unused-typedef-vars: "error"
 interfaced/prevent-unused-meta-params: "error"
 

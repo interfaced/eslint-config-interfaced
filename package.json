@@ -1,45 +1,54 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "ESLint config for the approaches adopted by Interfaced company",
-  "author": "Interfaced (http://interfaced.tv)",
+  "keywords": [
+    "closure compiler",
+    "config",
+    "eslint",
+    "externs",
+    "interfaced",
+    "lint",
+    "node",
+    "zombiebox"
+  ],
   "homepage": "https://github.com/interfaced/eslint-config-interfaced",
   "license": "MIT",
-  "engines": {
-    "node": ">=6",
-    "npm": ">=5"
-  },
+  "author": "Interfaced (http://interfaced.tv)",
   "files": [
+    "overrides/",
+    "rules/",
+    "utils/",
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
-    "rules",
-    "rules.js",
     "index.js",
-    "zombiebox.js"
-  ],
-  "keywords": [
-    "lint",
-    "eslint",
-    "config",
-    "interfaced",
-    "zombiebox",
-    "closure compiler"
+    "zombiebox.js",
+    "externs.js",
+    "node.js",
+    "mocha-chai.js"
   ],
   "scripts": {
-    "postpublish": "github-publish --project=eslint-config-interfaced --tag=$npm_package_version",
-    "check-rules-usage": "node scripts/check-rules-usage.js"
-  },
-  "peerDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-plugin-interfaced": "^1.4.0",
-    "eslint-plugin-goog": "^1.0.0"
+    "check-rules-usage": "node scripts/check-rules-usage.js",
+    "postpublish": "github-publish --project=eslint-config-interfaced --tag=$npm_package_version"
   },
   "dependencies": {
-    "fs-readdir-recursive": "1.1.0",
     "js-yaml": "3.10.0"
   },
   "devDependencies": {
-    "eslint": "^5.3.0"
+    "eslint": "^5.3.0",
+    "eslint-plugin-goog": "^1.0.0",
+    "eslint-plugin-interfaced": "^1.5.0",
+    "eslint-plugin-node": "^7.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-plugin-goog": "^1.0.0",
+    "eslint-plugin-interfaced": "^1.5.0",
+    "eslint-plugin-node": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=5"
   }
 }

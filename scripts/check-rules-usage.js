@@ -1,36 +1,60 @@
-const path = require('path');
-const fs = require('fs');
+const readRules = require('../utils/read-rules');
+const Rules = require('eslint/lib/rules');
 
-const RULE_DEPRECATION_MARK = /deprecated: true/;
+const allRules = {
+	'eslint': mapToObject(new Rules().getAllLoadedRules()),
+	'eslint-plugin-interfaced': require('eslint-plugin-interfaced').rules,
+	'eslint-plugin-goog': require('eslint-plugin-goog').rules,
+	'eslint-plugin-node': require('eslint-plugin-node').rules
+};
 
-const eslintRulesDir = path.join(require.resolve('eslint'), '..', 'rules');
-const eslintRuleFiles = fs.readdirSync(eslintRulesDir)
-	.filter((file) => !file.startsWith('.'));
+const usedRules = {
+	'eslint': Object.assign(
+		readRules('best-practices'),
+		readRules('es6'),
+		readRules('node.js-and-commonjs'),
+		readRules('possible-errors'),
+		readRules('strict-mode'),
+		readRules('stylistic-issues'),
+		readRules('variables'),
+	),
+	'eslint-plugin-interfaced': readRules('plugins/interfaced'),
+	'eslint-plugin-goog': readRules('plugins/goog'),
+	'eslint-plugin-node': readRules('plugins/node')
+};
 
-const eslintRules = eslintRuleFiles.map((file) => path.parse(file).name);
+Object.keys(allRules)
+	.forEach((source) => {
+		let rules = Object.keys(allRules[source]);
+		let deprecated = rules.filter((rule) => allRules[source][rule].meta && allRules[source][rule].meta.deprecated);
 
-const deprecatedRules = eslintRuleFiles.reduce((acc, file) => {
-	const fileContent = fs.readFileSync(path.join(eslintRulesDir, file), 'utf8');
+		if (source.startsWith(('eslint-plugin'))) {
+			const plugin = source.replace('eslint-plugin-', '');
 
-	if ((RULE_DEPRECATION_MARK).test(fileContent)) {
-		acc.push(path.parse(file).name);
-	}
+			rules = rules.map((rule) => `${plugin}/${rule}`);
+			deprecated = deprecated.map((rule) => `${plugin}/${rule}`);
+		}
 
-	return acc;
-}, []);
+		const used = Object.keys(usedRules[source]);
+		const usedDeprecated = deprecated.filter((rule) => used.includes(rule));
+		const unused = rules.filter((rule) => !used.includes(rule) && !deprecated.includes(rule));
 
-const usedRules = Object.keys(require('../rules'));
-const usedDeprecatedRules = deprecatedRules.filter((rule) => usedRules.includes(rule));
-const unusedRules = eslintRules.filter((rule) => !usedRules.includes(rule) && !deprecatedRules.includes(rule));
+		if (usedDeprecated.length) {
+			console.info(`Used ${usedDeprecated.length} deprecated rule(s) from ${source}:`);
+			console.info(usedDeprecated.join('\n'));
+		}
 
-if (usedDeprecatedRules.length) {
-	console.info(`${usedDeprecatedRules.length} deprecated ESLint rules are used:`);
-	console.info(usedDeprecatedRules.join('\n'));
-}
+		if (unused.length) {
+			console.info(`Unused ${unused.length} rule(s) from ${source}:`);
+			console.info(unused.join('\n'));
+		}
+	});
 
-if (unusedRules.length) {
-	console.info(`${unusedRules.length} ESLint rules are unused:`);
-	console.info(unusedRules.join('\n'));
-} else {
-	console.info('All ESLint rules are used');
+/**
+ * @param {Map} map
+ * @return {Object}
+ */
+function mapToObject(map) {
+	return Array.from(map)
+		.reduce((acc, [key, value]) => Object.assign(acc, {[key]: value}), {});
 }

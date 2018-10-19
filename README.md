@@ -3,7 +3,14 @@
 This package provides extendable shared [ESLint](https://eslint.org) config for the approaches adopted by [Interfaced](https://interfaced.tv/) company.
 
 Config's target environment leverages ECMAScript 6 with [Closure Compiler](https://developers.google.com/closure/compiler).  
-Also there is an extra config as an extension of the base config with some adjusting for [ZombieBox](https://zombiebox.tv) framework environment.
+
+Also there is a few sub configs:
+
+* `interfaced/node` - for [Node.js](https://nodejs.org)
+* `interfaced/esm` - for [ECMAScript modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules)
+* `interfaced/externs` - for [Closure Compiler Externs](https://developers.google.com/closure/compiler/docs/api-tutorial3#externs)
+* `interfaced/zombiebox` - for [ZombieBox](https://zombiebox.tv)
+* `interfaced/mocha-chai` - for [Mocha](https://mochajs.org) + [Chai](https://www.chaijs.com)
 
 ## Usage
 
@@ -16,8 +23,9 @@ npm info "eslint-config-interfaced@latest" peerDependencies
 ```sh
 npm i \
     eslint-config-interfaced@latest \
-    eslint-plugin-interfaced@<versionFromInfo> \
-    eslint-plugin-goog@<versionFromInfo> \
+    eslint-plugin-interfaced@<versionFromPeerDependencies> \
+    eslint-plugin-goog@<versionFromPeerDependencies> \
+    eslint-plugin-node@<versionFromPeerDependencies> \
 --save-dev
 ```
 
@@ -27,14 +35,45 @@ Or using `npx`'s shortcut:
 npx install-peerdeps eslint-config-interfaced@latest --dev
 ```
 
-2) Add `"extends": "interfaced"` or `"extends": "interfaced/zombiebox"` to your .eslintrc file.
+**Note**: `eslint-plugin-goog` and `eslint-plugin-node` are required only for `interfaced/zombiebox` and `interafced/node` respectively,
+so if you are not going to use one of these sub configs you can omit them.
 
-## Configuration
+2) Add `"extends": "interfaced"` (or one of the sub configs) to your `.eslintrc` file.
+
+## Overrides
+
+Currently ESLint [doesn't support](https://github.com/eslint/eslint/issues/8813) extending in overrides,
+so the next configuration is invalid and leads to `Unexpected top-level property "overrides[0].extends` error:
+
+```json
+{
+	"extends": "interfaced",
+	"overrides": [{
+		"files": "scripts/**",
+		"extends": "interfaced/node"
+	}]
+}
+```
+
+To work around this, you can require the overrides of the desired sub config directly (`.js` extension for `.eslintrc` is required):
+
+```js
+module.exports = {
+	extends: 'interfaced',
+	overrides: [{
+		files: 'scripts/**',
+		...require('eslint-config-interfaced/overrides/node')
+	}]
+};
+```
+
+## ZombieBox
 
 For a proper work of some rules you should specify domains (first part of a namespace) and known namespaces by shared settings:
 
 ```json
 {
+	"extends": "interfaced/zombiebox",
 	"settings": {
 		"domains": ["myapp"],
 		"knownNamespaces": ["myapp.Application", "myapp.ServiceContainer"]
@@ -44,16 +83,14 @@ For a proper work of some rules you should specify domains (first part of a name
 
 You can omit `knownNamespaces`, but in this case auto fix by `--fix` flag will not work for rules that depend on it.
 
-To ease retrieval of all known namespaces you can use an utility that is provided by `eslint-plugin-goog` package:
+To ease retrieval of all known namespaces you can use an utility that is provided by `eslint-plugin-goog` (`.js` extension for `.eslintrc` is required):
 
-```javascript
-// Your .eslintrc.js
-
+```js
 const path = require('path');
 const {nsUtils} = require('eslint-plugin-goog');
 
 module.exports = {
-	extends: 'interfaced',
+	extends: 'interfaced/zombiebox',
 	settings: {
 		domains: ['myapp'],
 		knownNamespaces: nsUtils.findByPattern(path.join(__dirname , 'app', 'myapp'))
@@ -61,13 +98,9 @@ module.exports = {
 };
 ```
 
-## ZombieBox
+So, a typical configuration for ZombieBox environment looks like below:
 
-A typical configuration for ZombieBox environment looks like below:
-
-```javascript
-// Your .eslintrc.js
-
+```js
 const path = require('path');
 const {nsUtils} = require('eslint-plugin-goog');
 

@@ -1,8 +1,44 @@
 # Change log
 
+## 1.4.0 (release date: 19.10.2018)
+
+* `eslint-plugin-node@7.0`
+* `eslint-plugin-interfaced@1.5`
+
+* New sub configs:
+    - `interfaced/node`
+    - `interfaced/esm`
+    - `interfaced/externs`
+    - `interfaced/mocha-chai`
+    
+* Added rules:
+    - `node/no-extraneous-import`
+    - `node/no-extraneous-require`
+    - `node/no-missing-import`
+    - `node/no-missing-require`
+    - `node/no-missing-require`
+    - `node/no-unpublished-import`
+    - `node/no-unpublished-require`
+    - `node/no-unsupported-features/es-builtins`
+    - `node/no-unsupported-features/es-syntax`
+    - `node/no-unsupported-features/node-builtins`
+    - `node/process-exit-as-throw`
+    - `node/shebang`
+    - `node/no-deprecated-api`
+    - `node/exports-style`
+    - `node/prefer-global/buffer`
+    - `node/prefer-global/console`
+    - `node/prefer-global/process`
+    - `node/prefer-global/url-search-params`
+    - `node/prefer-global/url`
+    - `interfaced/prevent-unused-jsdoc-types`
+
 ## 1.3.0 (release date: 09.10.2018)
 
 * `eslint-plugin-interfaced@1.4`
+
+* Added rules:
+    - `interfaced/jsdoc-type-indent`
 
 ## 1.2.0 (release date: 30.08.2018)
 
@@ -172,7 +208,7 @@
     - `goog/no-unused-deps`
     - `goog/right-order`
     - `goog/no-duplicates`
-    
+
 * Added `goog` and `interfaced` to `plugins` section
 
 ## 0.1.0 (release date: 29.03.2017)

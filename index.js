@@ -1,3 +1,5 @@
+const readRules = require('./utils/read-rules');
+
 module.exports = {
 	parser: 'espree',
 	parserOptions: {
@@ -5,12 +7,19 @@ module.exports = {
 	},
 	env: {
 		browser: true,
-		es6: true,
-		node: true
+		es6: true
 	},
 	plugins: [
-		'interfaced',
-		'goog'
+		'interfaced'
 	],
-	rules: require('./rules')
+	rules: Object.assign(
+		readRules('best-practices'),
+		readRules('es6'),
+		readRules('node.js-and-commonjs'),
+		readRules('possible-errors'),
+		readRules('strict-mode'),
+		readRules('stylistic-issues'),
+		readRules('variables'),
+		readRules('plugins/interfaced')
+	)
 };
