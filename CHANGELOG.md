@@ -1,5 +1,9 @@
 # Change log
 
+## 1.4.1 (release date: 19.10.2018)
+
+* Tracked `esm.js` file
+
 ## 1.4.0 (release date: 19.10.2018)
 
 * `eslint-plugin-node@7.0`

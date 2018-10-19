@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "ESLint config for the approaches adopted by Interfaced company",
   "keywords": [
     "closure compiler",
@@ -23,14 +23,14 @@
     "README.md",
     "CHANGELOG.md",
     "index.js",
+    "node.js",
+    "esm.js",
     "zombiebox.js",
     "externs.js",
-    "node.js",
     "mocha-chai.js"
   ],
   "scripts": {
-    "check-rules-usage": "node scripts/check-rules-usage.js",
-    "postpublish": "github-publish --project=eslint-config-interfaced --tag=$npm_package_version"
+    "check-rules-usage": "node scripts/check-rules-usage.js"
   },
   "dependencies": {
     "js-yaml": "3.10.0"
