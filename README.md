@@ -26,6 +26,7 @@ npm i \
     eslint-plugin-interfaced@<versionFromPeerDependencies> \
     eslint-plugin-goog@<versionFromPeerDependencies> \
     eslint-plugin-node@<versionFromPeerDependencies> \
+    eslint-plugin-import@<versionFromPeerDependencies> \
 --save-dev
 ```
 
@@ -35,8 +36,8 @@ Or using `npx`'s shortcut:
 npx install-peerdeps eslint-config-interfaced@latest --dev
 ```
 
-**Note**: `eslint-plugin-goog` and `eslint-plugin-node` are required only for `interfaced/zombiebox` and `interafced/node` respectively,
-so if you are not going to use one of these sub configs you can omit them.
+**Note**: `eslint-plugin-goog`, `eslint-plugin-node` and `eslint-plugin-import` are required only for
+`interfaced/zombiebox`, `interafced/node` and `interfaced/esm` respectively, so if you are not going to use one of these sub configs you can omit them.
 
 2) Add `"extends": "interfaced"` (or one of the sub configs) to your `.eslintrc` file.
 

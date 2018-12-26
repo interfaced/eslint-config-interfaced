@@ -1,11 +1,12 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "ESLint config for the approaches adopted by Interfaced company",
   "keywords": [
     "closure compiler",
     "config",
     "eslint",
+    "esm",
     "externs",
     "interfaced",
     "lint",
@@ -38,13 +39,15 @@
   "devDependencies": {
     "eslint": "^5.3.0",
     "eslint-plugin-goog": "^1.0.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-interfaced": "^1.5.0",
     "eslint-plugin-node": "^7.0.1"
   },
   "peerDependencies": {
     "eslint": "^5.3.0",
     "eslint-plugin-goog": "^1.0.0",
-    "eslint-plugin-interfaced": "^1.5.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-interfaced": "^1.6.0",
     "eslint-plugin-node": "^7.0.1"
   },
   "engines": {

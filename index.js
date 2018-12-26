@@ -15,7 +15,6 @@ module.exports = {
 	rules: Object.assign(
 		readRules('best-practices'),
 		readRules('es6'),
-		readRules('node.js-and-commonjs'),
 		readRules('possible-errors'),
 		readRules('strict-mode'),
 		readRules('stylistic-issues'),

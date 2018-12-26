@@ -5,14 +5,15 @@ const allRules = {
 	'eslint': mapToObject(new Rules().getAllLoadedRules()),
 	'eslint-plugin-interfaced': require('eslint-plugin-interfaced').rules,
 	'eslint-plugin-goog': require('eslint-plugin-goog').rules,
-	'eslint-plugin-node': require('eslint-plugin-node').rules
+	'eslint-plugin-node': require('eslint-plugin-node').rules,
+	'eslint-plugin-import': require('eslint-plugin-import').rules
 };
 
 const usedRules = {
 	'eslint': Object.assign(
 		readRules('best-practices'),
 		readRules('es6'),
-		readRules('node.js-and-commonjs'),
+		readRules('node'),
 		readRules('possible-errors'),
 		readRules('strict-mode'),
 		readRules('stylistic-issues'),
@@ -20,7 +21,8 @@ const usedRules = {
 	),
 	'eslint-plugin-interfaced': readRules('plugins/interfaced'),
 	'eslint-plugin-goog': readRules('plugins/goog'),
-	'eslint-plugin-node': readRules('plugins/node')
+	'eslint-plugin-node': readRules('plugins/node'),
+	'eslint-plugin-import': readRules('plugins/import')
 };
 
 Object.keys(allRules)

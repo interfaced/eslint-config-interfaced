@@ -1,5 +1,63 @@
 # Change log
 
+## 1.5.0 (release date: 26.12.2018)
+
+* `eslint-plugin-import@2.14`
+* `eslint-plugin-interfaced@1.6`
+
+* Added rules:
+    - `import/no-unresolved`
+    - `import/named`
+    - `import/default`
+    - `import/namespace`
+    - `import/no-restricted-paths`
+    - `import/no-absolute-path`
+    - `import/no-dynamic-require`
+    - `import/no-internal-modules`
+    - `import/no-webpack-loader-syntax`
+    - `import/no-self-import`
+    - `import/no-cycle`
+    - `import/no-useless-path-segments`
+    - `import/no-relative-parent-imports`
+    - `import/export`
+    - `import/no-named-as-default`
+    - `import/no-named-as-default-member`
+    - `import/no-deprecated`
+    - `import/no-extraneous-dependencies`
+    - `import/no-mutable-exports`
+    - `import/unambiguous`
+    - `import/no-commonjs`
+    - `import/no-amd`
+    - `import/no-nodejs-modules`
+    - `import/first`
+    - `import/exports-last`
+    - `import/no-duplicates`
+    - `import/no-namespace`
+    - `import/extensions`
+    - `import/order`
+    - `import/newline-after-import`
+    - `import/prefer-default-export`
+    - `import/max-dependencies`
+    - `import/no-unassigned-import`
+    - `import/no-named-default`
+    - `import/no-default-export`
+    - `import/no-named-export`
+    - `import/no-anonymous-default-export`
+    - `import/group-exports`
+    - `import/dynamic-import-chunkname`
+    - `interfaced/no-jsdoc-type-multi-spaces`
+    - `interfaced/singular-enum`
+
+* Removed rules:
+    - `interfaced/prevent-unused-typedef-vars`
+    - `interfaced/lines-between-statics`
+    - `interfaced/statics-order`
+
+* Renamed rules:
+    - `interfaced/no-tabs-in-jsdoc-type` -> `interfaced/no-jsdoc-type-tabs`
+
+* ESLint's rules for Node moved to `interfaced/node` [BREAKING]
+
 ## 1.4.1 (release date: 19.10.2018)
 
 * Tracked `esm.js` file
@@ -14,7 +72,7 @@
     - `interfaced/esm`
     - `interfaced/externs`
     - `interfaced/mocha-chai`
-    
+
 * Added rules:
     - `node/no-extraneous-import`
     - `node/no-extraneous-require`
@@ -103,7 +161,7 @@
 
 ## 0.6.1 (release date: 15.01.2018)
 
-* Tracked zombiebox config file
+* Tracked `zombiebox.js` file
 
 ## 0.6.0 (release date: 15.01.2018)
 
@@ -181,7 +239,7 @@
 * Removed deprecated rules:
     - `lines-around-directive`
     - `newline-after-var`
-    - `newline-before-return` [BREAKING]
+    - `newline-before-return`
 
 * Use .yaml for configuration
 
