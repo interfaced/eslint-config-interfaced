@@ -1,1 +1,1 @@
-strict: "off"
+strict: ["error", "never"]

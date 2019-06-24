@@ -3,9 +3,9 @@ array-element-newline: "off"
 array-bracket-spacing: ["error", "never"]
 block-spacing: ["error", "never"]
 brace-style: "error"
-camelcase: "off" # Redefined by interfaced/camelcase
+camelcase: "error"
 capitalized-comments: "off"
-comma-dangle: ["error", "never"]
+comma-dangle: "error"
 comma-spacing: "error"
 comma-style: ["error", "last"]
 computed-property-spacing: "error"
@@ -74,14 +74,17 @@ padding-line-between-statements: "off"
 prefer-object-spread: "error"
 quote-props: "off"
 quotes: ["error", "single", { allowTemplateLiterals: true }]
-require-jsdoc: "off" # Redefined by interfaced/require-jsdoc
 semi: ["error", "always"]
 semi-spacing: "error"
 semi-style: "error"
 sort-keys: "off"
 sort-vars: "off"
 space-before-blocks: "error"
-space-before-function-paren: ["error", "never"]
+space-before-function-paren: ["error", {
+  "anonymous": "never",
+  "named": "never",
+  "asyncArrow": "always"
+}]
 space-in-parens: "error"
 space-infix-ops: "error"
 space-unary-ops: "error"

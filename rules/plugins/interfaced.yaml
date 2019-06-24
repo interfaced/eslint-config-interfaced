@@ -42,7 +42,7 @@ interfaced/no-jsdoc-type-tabs: "error"
 interfaced/no-restricted-jsdoc-tags: ["error", {
   tags: ["inheritdoc", "public", {
     tag: "extends",
-    allowWithTags: ["interface"],
+    allowWithTags: ["interface", "constructor", "record"],
     allowWithTypes: ["TypeApplication"] # Let use @extends for generics
   }]
 }]
@@ -73,33 +73,5 @@ interfaced/no-public-underscore: "error"
 interfaced/prevent-unused-meta-params: "error"
 
 # Redefined
-interfaced/camelcase: "error"
 interfaced/no-param-reassign: "error"
 interfaced/no-unused-expressions: "error"
-interfaced/require-jsdoc: ["error", {
-  require: {
-    FunctionDeclaration: false,
-    ArrowFunctionExpression: false,
-    ClassDeclaration: true,
-    MethodDefinition: true
-  }
-}]
-interfaced/valid-jsdoc: ["error", {
-  prefer: {
-      arg: "param",
-      argument: "param",
-      returns: "return",
-      throw: "throws" # Closure Compiler recognizes only @throws
-  },
-  preferType: {
-      Boolean: "boolean",
-      Number: "number",
-      String: "string",
-      object: "Object"
-  },
-  requireReturn: false,
-  requireReturnType: true,
-  requireParamType: true,
-  requireReturnDescription: false,
-  requireParamDescription: false
-}]

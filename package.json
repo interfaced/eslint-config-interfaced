@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "1.5.0",
+  "version": "2.0.0-beta.1",
   "description": "ESLint config for the approaches adopted by Interfaced company",
   "keywords": [
     "closure compiler",
@@ -14,6 +14,10 @@
     "zombiebox"
   ],
   "homepage": "https://github.com/interfaced/eslint-config-interfaced",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:interfaced/eslint-config-interfaced.git"
+  },
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
   "files": [
@@ -34,21 +38,22 @@
     "check-rules-usage": "node scripts/check-rules-usage.js"
   },
   "dependencies": {
-    "js-yaml": "3.10.0"
+    "js-yaml": "3.13.1"
   },
   "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-plugin-goog": "^1.0.0",
-    "eslint-plugin-import": "^2.14.0",
+    "chalk": "^2.4.2",
+    "eslint": "^6.0.0",
+    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-interfaced": "^1.5.0",
-    "eslint-plugin-node": "^7.0.1"
+    "eslint-plugin-jsdoc": "^8.6.0",
+    "eslint-plugin-node": "^9.1.0"
   },
   "peerDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-plugin-goog": "^1.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-interfaced": "^1.6.0",
-    "eslint-plugin-node": "^7.0.1"
+    "eslint": "^6.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-interfaced": "^1.6.1",
+    "eslint-plugin-jsdoc": "^8.6.0",
+    "eslint-plugin-node": "^9.1.0"
   },
   "engines": {
     "node": ">=6",

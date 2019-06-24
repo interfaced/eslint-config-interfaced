@@ -25,7 +25,7 @@ prefer-spread: "error"
 prefer-template: "off"
 require-yield: "error"
 rest-spread-spacing: "error"
-sort-imports: "off"
+sort-imports: "off" # Handled by import plugin
 symbol-description: "off"
 template-curly-spacing: "error"
 yield-star-spacing: "error"

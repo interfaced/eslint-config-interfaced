@@ -15,7 +15,7 @@ no-empty: "error"
 no-empty-character-class: "error"
 no-ex-assign: "error"
 no-extra-boolean-cast: "error"
-no-extra-parens: "off"
+no-extra-parens: "off" # Conflicts with GCC type casts
 no-extra-semi: "error"
 no-func-assign: "error"
 no-inner-declarations: ["error", "both"]
@@ -33,5 +33,4 @@ no-unsafe-finally: "error"
 no-unsafe-negation: "error"
 require-atomic-updates: "error"
 use-isnan: "error"
-valid-jsdoc: "off" # Redefined by interfaced/valid-jsdoc
 valid-typeof: "error"

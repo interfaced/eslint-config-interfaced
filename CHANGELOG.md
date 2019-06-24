@@ -1,5 +1,55 @@
 # Change log
 
+## 2.0.0-beta.1 (release date: 24.06.2019)
+
+* `eslint@6.0.0`
+* `eslint-plugin-import@2.17.3`
+* `eslint-plugin-node@9.1.0`
+* Added `eslint-plugin-jsdoc` and most of its rules
+* Removed `eslint-plugin-goog`
+* Removed `zombiebox` override and `goog` config
+* Dropped support for node 6
+
+* Added rules:
+    - `prefer-object-spread`
+    - `no-extend-native`
+    - `no-extra-bind`
+    - `no-invalid-this`
+    - `no-iterator`
+    - `no-multi-str`
+    - `no-throw-literal`
+    - `no-useless-catch`
+    - `prefer-promise-reject-errors`
+    - `handle-callback-err`
+    - `no-restricted-modules` (`color`, `fs-promise`, `walk`)
+    - `no-mixed-requires`
+    - `import/no-unused-modules`
+    - `node/prefer-global/text-decoder`
+    - `node/prefer-global/text-encoder`
+    - `node/file-extension-in-import`
+    - `jsdoc/check-alignment` 
+    - `jsdoc/check-examples` 
+    - `jsdoc/check-param-names` 
+    - `jsdoc/check-tag-names` 
+    - `jsdoc/implements-on-classes` 
+    - `jsdoc/match-description`
+    - `jsdoc/no-undefined-types`
+    - `jsdoc/require-hyphen-before-param-description`
+    - `jsdoc/require-jsdoc`
+    - `jsdoc/require-param` 
+    - `jsdoc/require-param-name` 
+    - `jsdoc/require-param-type` 
+    - `jsdoc/require-returns` 
+    - `jsdoc/require-returns-check` 
+    - `jsdoc/require-returns-type` 
+    - `jsdoc/valid-types` 
+
+* Removed rules:
+    - `interfaced/camelcase`
+    - `interfaced/require-jsdoc`
+    - `interfaced/valid-jsdoc`
+    - `node/prefer-global/url`
+
 ## 1.5.0 (release date: 26.12.2018)
 
 * `eslint-plugin-import@2.14`

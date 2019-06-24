@@ -10,7 +10,8 @@ module.exports = {
 		es6: true
 	},
 	plugins: [
-		'interfaced'
+		'interfaced',
+		'jsdoc'
 	],
 	rules: Object.assign(
 		readRules('best-practices'),
@@ -19,6 +20,14 @@ module.exports = {
 		readRules('strict-mode'),
 		readRules('stylistic-issues'),
 		readRules('variables'),
-		readRules('plugins/interfaced')
-	)
+		readRules('plugins/interfaced'),
+		readRules('plugins/jsdoc')
+	),
+	settings: {
+		jsdoc: {
+			tagNamePreference: {
+				'returns': 'return'
+			}
+		}
+	},
 };

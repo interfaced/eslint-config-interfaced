@@ -1,0 +1,40 @@
+jsdoc/check-alignment: "error"
+jsdoc/check-examples: "error"
+jsdoc/check-indentation: "off" # Indents are useful for object definitions
+jsdoc/check-param-names: "error"
+jsdoc/check-syntax: "off" # We use GCC, duh
+jsdoc/check-tag-names: "error"
+jsdoc/check-types: "off" # It checks against GCC types
+jsdoc/implements-on-classes: "error"
+jsdoc/match-description: ["error", {
+  matchDescription: "^[^а-яА-Я]+$"
+}]
+jsdoc/newline-after-description: "off"
+jsdoc/no-types: "off"
+jsdoc/no-undefined-types: ["error", {
+  definedTypes: [
+    "ClientRect"
+  ]
+}]
+jsdoc/require-description: "off"
+jsdoc/require-description-complete-sentence: "off"
+jsdoc/require-example: "off"
+jsdoc/require-hyphen-before-param-description: ["error", "never"]
+jsdoc/require-jsdoc: ["error", {
+  require: {
+    ArrowFunctionExpression: false,
+    ClassDeclaration: true,
+    FunctionDeclaration: false,
+    FunctionExpression: false,
+    MethodDefinition: true
+  }
+}]
+jsdoc/require-param: "error"
+jsdoc/require-param-description: "off"
+jsdoc/require-param-name: "error"
+jsdoc/require-param-type: "error"
+jsdoc/require-returns: "error"
+jsdoc/require-returns-check: "error"
+jsdoc/require-returns-description: "off"
+jsdoc/require-returns-type: "error"
+jsdoc/valid-types: "error"
