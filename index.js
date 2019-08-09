@@ -26,8 +26,14 @@ module.exports = {
 	settings: {
 		jsdoc: {
 			tagNamePreference: {
-				'returns': 'return'
+				'returns': 'return',
+				'yields': 'yield',
+				'constant': 'const',
+				'augments': 'extends'
+			},
+			preferredTypes: {
+				'object': 'Object'
 			}
 		}
-	},
+	}
 };

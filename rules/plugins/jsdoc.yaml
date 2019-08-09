@@ -4,18 +4,22 @@ jsdoc/check-indentation: "off" # Indents are useful for object definitions
 jsdoc/check-param-names: "error"
 jsdoc/check-syntax: "off" # We use GCC, duh
 jsdoc/check-tag-names: "error"
-jsdoc/check-types: "off" # It checks against GCC types
+jsdoc/check-types: "error" # It checks against GCC types
 jsdoc/implements-on-classes: "error"
 jsdoc/match-description: ["error", {
   matchDescription: "^[^а-яА-Я]+$"
 }]
 jsdoc/newline-after-description: "off"
 jsdoc/no-types: "off"
-jsdoc/no-undefined-types: ["error", {
-  definedTypes: [
-    "ClientRect"
-  ]
-}]
+
+# Broken by https://github.com/gajus/eslint-plugin-jsdoc/issues/363
+jsdoc/no-undefined-types: "off"
+#jsdoc/no-undefined-types: ["error", {
+#  definedTypes: [
+#    "ClientRect"
+#  ]
+#}]
+
 jsdoc/require-description: "off"
 jsdoc/require-description-complete-sentence: "off"
 jsdoc/require-example: "off"
@@ -37,4 +41,6 @@ jsdoc/require-returns: "error"
 jsdoc/require-returns-check: "error"
 jsdoc/require-returns-description: "off"
 jsdoc/require-returns-type: "error"
-jsdoc/valid-types: "error"
+
+# Off until https://github.com/gajus/eslint-plugin-jsdoc/pull/308 is accepted
+jsdoc/valid-types: "off"

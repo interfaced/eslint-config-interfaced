@@ -43,7 +43,7 @@ interfaced/no-restricted-jsdoc-tags: ["error", {
   tags: ["inheritdoc", "public", {
     tag: "extends",
     allowWithTags: ["interface", "constructor", "record"],
-    allowWithTypes: ["TypeApplication"] # Let use @extends for generics
+    allowWithTypes: ["TypeApplication"] # Lets use @extends for generics
   }]
 }]
 interfaced/prefer-shorthand-jsdoc-types: ["error", { optionalParam: "always", nullableType: "always" }]

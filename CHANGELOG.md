@@ -1,5 +1,10 @@
 # Change log
 
+## 2.0.0-beta.2 (release date: 09.08.2019)
+
+* Removed 'jsdoc/no-undefined-types' rule temporally 
+* Removed 'jsdoc/valid-types' rule temporally 
+
 ## 2.0.0-beta.1 (release date: 24.06.2019)
 
 * `eslint@6.0.0`
