@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-interfaced",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "ESLint config for the approaches adopted by Interfaced company",
   "keywords": [
     "closure compiler",
@@ -42,18 +42,18 @@
   },
   "devDependencies": {
     "chalk": "^2.4.2",
-    "eslint": "^6.1.0",
+    "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-interfaced": "2.0.0-beta.1",
-    "eslint-plugin-jsdoc": "^15.8.0",
-    "eslint-plugin-node": "^9.1.0"
+    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-node": "^10.0.0"
   },
   "peerDependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-interfaced": "2.0.0-beta.1",
-    "eslint-plugin-jsdoc": "^15.8.0",
-    "eslint-plugin-node": "^9.1.0"
+    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-node": "^10.0.0"
   },
   "engines": {
     "node": ">=6",

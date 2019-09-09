@@ -3,7 +3,74 @@ jsdoc/check-examples: "error"
 jsdoc/check-indentation: "off" # Indents are useful for object definitions
 jsdoc/check-param-names: "error"
 jsdoc/check-syntax: "off" # We use GCC, duh
-jsdoc/check-tag-names: "error"
+jsdoc/check-tag-names: ["error", {
+  definedTags: [
+    # https://github.com/google/closure-compiler/blob/master/src/com/google/javascript/jscomp/parsing/Annotation.java
+    # version v20190618
+   "ngInject",
+   "abstract",
+   "argument",
+   "author",
+   "closurePrimitive",
+   "const",
+   "constant",
+   "constructor",
+   "customElement",
+   "copyright",
+   "define",
+   "deprecated",
+   "desc",
+   "dict",
+   "enum",
+   "export",
+   "expose",
+   "extends",
+   "externs",
+   "fileoverview",
+   "final",
+   "hidden",
+   "idGenerator",
+   "implements",
+   "implicitCast",
+   "inheritDoc",
+   "interface",
+   "record",
+   "lends",
+   "license",
+   "meaning",
+   "mixinClass",
+   "mixinFunction",
+   "modifies",
+   "nocollapse",
+   "nocompile",
+   "noinline",
+   "nosideeffects",
+   "override",
+   "owner",
+   "package",
+   "param",
+   "polymer",
+   "polymerBehavior",
+   "preserve",
+   "private",
+   "protected",
+   "public",
+   "return",
+   "returns",
+   "see",
+   "struct",
+   "suppress",
+   "template",
+   "this",
+   "throws",
+   "type",
+   "typedef",
+   "typeSummary",
+   "unrestricted",
+   "version",
+   "wizaction"
+ ]
+}]
 jsdoc/check-types: "error" # It checks against GCC types
 jsdoc/implements-on-classes: "error"
 jsdoc/match-description: ["error", {
@@ -41,6 +108,4 @@ jsdoc/require-returns: "error"
 jsdoc/require-returns-check: "error"
 jsdoc/require-returns-description: "off"
 jsdoc/require-returns-type: "error"
-
-# Off until https://github.com/gajus/eslint-plugin-jsdoc/pull/308 is accepted
-jsdoc/valid-types: "off"
+jsdoc/valid-types: "error"

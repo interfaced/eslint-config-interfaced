@@ -1,5 +1,13 @@
 # Change log
 
+## 2.0.0-beta.3 (release date: 09.09.2019)
+
+* Disabled `no-unassigned-import`
+* Re-enabled `jsdoc/valid-types`
+* Disabled `require-atomic-updates`
+* Configured `jsdoc/check-tag-names` with proprietary GCC tags
+* Configured `prefer-promise-reject-errors` with `allowEmptyReject`: `true` 
+
 ## 2.0.0-beta.2 (release date: 09.08.2019)
 
 * Removed 'jsdoc/no-undefined-types' rule temporally 
