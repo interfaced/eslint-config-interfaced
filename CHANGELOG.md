@@ -1,5 +1,20 @@
 # Change log
 
+## 2.0.0 (release date: 27.12.2019)
+
+* Enabled `jsdoc/no-undefined-types`
+* Added new rules:
+    - `node/no-exports-assign`
+    - `default-param-last`
+    - `grouped-accessor-pairs`
+    - `no-constructor-return`
+    - `prefer-regex-literals`
+    - `no-import-assign`
+    - `no-dupe-else-if`
+    - `no-setter-return`
+    - `function-call-argument-newline`
+    - `prefer-exponentiation-operator`
+
 ## 2.0.0-beta.3 (release date: 09.09.2019)
 
 * Disabled `no-unassigned-import`

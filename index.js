@@ -25,6 +25,7 @@ module.exports = {
 	),
 	settings: {
 		jsdoc: {
+			mode: 'closure',
 			tagNamePreference: {
 				'returns': 'return',
 				'yields': 'yield',

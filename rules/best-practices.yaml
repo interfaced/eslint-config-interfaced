@@ -6,14 +6,17 @@ class-methods-use-this: "off"
 consistent-return: "off" # Introduces a headache with Promise callbacks, also a little redundant with static typing
 curly: "error"
 default-case: "off"
+default-param-last: "error"
 dot-notation: "off" # GCC has its own rules regarding property access types
 dot-location: ["error", "property"]
 eqeqeq: "error"
+grouped-accessor-pairs: "error"
 guard-for-in: "error"
 max-classes-per-file: "off"
 no-alert: "error"
 no-caller: "error"
 no-case-declarations: "off"
+no-constructor-return: "error"
 no-div-regex: "off"
 no-else-return: "error"
 no-empty-function: ["error", { allow: ["methods"] }]
@@ -66,6 +69,7 @@ no-warning-comments: ["warn", { terms: ["todo"], location: "anywhere" }]
 no-with: "error"
 prefer-named-capture-group: "off" # TODO: discuss
 prefer-promise-reject-errors: ["error", { allowEmptyReject: true }]
+prefer-regex-literals: "error"
 radix: "error"
 require-await: "off"
 require-unicode-regexp: "off"

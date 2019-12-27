@@ -1,4 +1,6 @@
 # Possible Errors
+node/no-callback-literal: "off" # This is just a terrible idea
+node/no-exports-assign: "error"
 node/no-extraneous-import: "error"
 node/no-extraneous-require: "error"
 node/no-missing-import: "error"

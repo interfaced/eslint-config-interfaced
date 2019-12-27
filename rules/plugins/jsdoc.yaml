@@ -71,7 +71,7 @@ jsdoc/check-tag-names: ["error", {
    "wizaction"
  ]
 }]
-jsdoc/check-types: "error" # It checks against GCC types
+jsdoc/check-types: "error"
 jsdoc/implements-on-classes: "error"
 jsdoc/match-description: ["error", {
   matchDescription: "^[^а-яА-Я]+$"
@@ -79,13 +79,11 @@ jsdoc/match-description: ["error", {
 jsdoc/newline-after-description: "off"
 jsdoc/no-types: "off"
 
-# Broken by https://github.com/gajus/eslint-plugin-jsdoc/issues/363
-jsdoc/no-undefined-types: "off"
-#jsdoc/no-undefined-types: ["error", {
-#  definedTypes: [
-#    "ClientRect"
-#  ]
-#}]
+jsdoc/no-undefined-types: ["error", {
+  definedTypes: [
+    "ClientRect"
+  ]
+}]
 
 jsdoc/require-description: "off"
 jsdoc/require-description-complete-sentence: "off"

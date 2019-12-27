@@ -15,6 +15,7 @@ func-call-spacing: "error"
 func-name-matching: "off"
 func-names: "off"
 func-style: "off"
+function-call-argument-newline: ["error", "consistent"]
 function-paren-newline: "off"
 id-blacklist: "off"
 id-length: "off"
@@ -71,6 +72,7 @@ operator-assignment: "off"
 operator-linebreak: ["error", "after"]
 padded-blocks: ["error", "never"]
 padding-line-between-statements: "off"
+prefer-exponentiation-operator: "error"
 prefer-object-spread: "error"
 quote-props: "off"
 quotes: ["error", "single", { allowTemplateLiterals: true }]
