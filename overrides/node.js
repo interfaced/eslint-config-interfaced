@@ -11,7 +11,6 @@ module.exports = {
 		{
 			'no-console': 'off', // Console using is ok in Node
 		},
-		readRules('node'),
 		readRules('plugins/node')
 	)
 };

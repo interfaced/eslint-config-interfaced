@@ -1,5 +1,16 @@
 # Change log
 
+## 2.1.0 (release date: 25.06.2020)
+
+* Update to ESLint 7 (`7.3.1`)
+* Added new rules: 
+    - `default-case-last`
+    - `no-loss-of-precision`
+    - `no-promise-executor-return`
+    - `no-restricted-exports`
+    - `no-unreachable-loop`
+    - `no-useless-backreference`
+
 ## 2.0.0 (release date: 27.12.2019)
 
 * Enabled `jsdoc/no-undefined-types`

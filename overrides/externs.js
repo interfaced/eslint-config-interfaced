@@ -5,6 +5,7 @@ module.exports = {
 		'no-empty-function': 'off',
 		'interfaced/valid-jsdoc': 'off',
 		'interfaced/no-unused-expressions': 'off',
-		'interfaced/no-empty-method': 'off'
+		'interfaced/no-empty-method': 'off',
+		'jsdoc/require-returns-check': 'off'
 	}
 };

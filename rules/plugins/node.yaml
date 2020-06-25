@@ -1,16 +1,20 @@
 # Possible Errors
+node/handle-callback-err: "error"
 node/no-callback-literal: "off" # This is just a terrible idea
 node/no-exports-assign: "error"
 node/no-extraneous-import: "error"
 node/no-extraneous-require: "error"
 node/no-missing-import: "error"
 node/no-missing-require: "error"
+node/no-new-require: "error"
+node/no-path-concat: "error"
 node/no-unpublished-bin: "error"
 node/no-unpublished-import: "error"
 node/no-unpublished-require: "error"
 node/no-unsupported-features/es-builtins: "error"
 node/no-unsupported-features/es-syntax: "error"
 node/no-unsupported-features/node-builtins: "error"
+node/no-process-exit: "off"
 node/process-exit-as-throw: "off"
 node/shebang: "error"
 
@@ -18,8 +22,39 @@ node/shebang: "error"
 node/no-deprecated-api: "error"
 
 # Stylistic Issues
+node/callback-return: "off"
 node/exports-style: "error"
 node/file-extension-in-import: ["error", "never"]
+node/global-require: "error"
+node/no-mixed-requires: "error"
+node/no-process-env: "off"
+node/no-restricted-import: ["error", {
+  name: ["color", "colors", "ansi-colors", "chalk", "colorette"],
+  message: "Use kleur instead"
+}, {
+    name: "fs-promise",
+    message: "Use fs-extra instead"
+}, {
+  name: "walk-sync",
+  message: "Use klaw or klaw-sync instead"
+}, {
+  name: "walk",
+  message: "Use klaw or klaw-sync instead"
+}]
+node/no-restricted-require: ["error", {
+  name: ["color", "colors", "ansi-colors", "chalk", "colorette"],
+  message: "Use kleur instead"
+}, {
+    name: "fs-promise",
+    message: "Use fs-extra instead"
+}, {
+  name: "walk-sync",
+  message: "Use klaw or klaw-sync instead"
+}, {
+  name: "walk",
+  message: "Use klaw or klaw-sync instead"
+}]
+node/no-sync: "warning"
 node/prefer-global/buffer: "error"
 node/prefer-global/console: "error"
 node/prefer-global/process: "error"

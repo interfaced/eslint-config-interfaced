@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+const kleur = require('kleur');
 const readRules = require('../utils/read-rules');
 const lazyEslintRules = require('eslint/lib/rules');
 
@@ -13,7 +13,6 @@ const usedRules = {
 	'eslint': Object.assign(
 		readRules('best-practices'),
 		readRules('es6'),
-		readRules('node'),
 		readRules('possible-errors'),
 		readRules('strict-mode'),
 		readRules('stylistic-issues'),
@@ -42,14 +41,14 @@ for (const [source, rulesMap] of Object.entries(allRules))  {
 	if (usedDeprecated.length) {
 		console.info(`\nConfig is using ${usedDeprecated.length} deprecated rule(s) from ${source}:`);
 		for (const rule of usedDeprecated) {
-			console.info(` • ${chalk.red(rule)}`);
+			console.info(` • ${kleur.red(rule)}`);
 		}
 	}
 
 	if (unused.length) {
 		console.info(`\nConfig is not using ${unused.length} rule(s) from ${source}:`);
 		for (const rule of unused) {
-			console.info(` + ${chalk.green(rule)}`);
+			console.info(` + ${kleur.green(rule)}`);
 		}
 	}
 }
