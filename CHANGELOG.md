@@ -1,5 +1,9 @@
 # Change log
 
+## 2.1.1 (release date: 25.06.2020)
+
+* Fix syntax errors in 2.1.0 configs
+
 ## 2.1.0 (release date: 25.06.2020)
 
 * Update to ESLint 7 (`7.3.1`)
