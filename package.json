@@ -38,10 +38,10 @@
     "check-rules-usage": "node scripts/check-rules-usage.js"
   },
   "dependencies": {
-    "js-yaml": "3.14.0"
+    "js-yaml": "4.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
+    "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-interfaced": "2.0.0",
     "eslint-plugin-jsdoc": "^28.5.1",
@@ -49,10 +49,10 @@
     "kleur": "^4.0.2"
   },
   "peerDependencies": {
-    "eslint": "^7.3.1",
+    "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-interfaced": "2.0.0",
-    "eslint-plugin-jsdoc": "^28.5.1",
+    "eslint-plugin-interfaced": "^2.0.0",
+    "eslint-plugin-jsdoc": "^36.1.0",
     "eslint-plugin-node": "^11.1.0"
   },
   "engines": {

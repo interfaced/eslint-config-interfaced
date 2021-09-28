@@ -12,7 +12,7 @@ module.exports = (rulesSetName) => {
 	const filePath = path.join(rulesDir, `${rulesSetName}.yaml`);
 
 	try {
-		return yaml.safeLoad(fs.readFileSync(filePath, 'utf8')) || {};
+		return yaml.load(fs.readFileSync(filePath, 'utf8')) || {};
 	} catch (e) {
 		throw new Error(`Error reading ${rulesSetName}: ${e}`);
 	}
